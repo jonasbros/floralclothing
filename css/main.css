@@ -11,10 +11,12 @@ main {
     position: relative;
     height: 600px;
     overflow: hidden;
+    z-index: 999;
     background-image: url("../images/h4.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    background-color: white; }
   main .logo {
     height: 300px;
     width: 100%;
