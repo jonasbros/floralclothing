@@ -1,0 +1,232 @@
+* {
+  font-family: "Open Sans", sans-serif; }
+
+main {
+  overflow: hidden; }
+  main .flower-box {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background-image: url("../images/h4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; }
+  main .logo {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    background-image: url("../images/logow.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 30%;
+    left: 50%;
+    margin-left: -50%; }
+  main .fore-flower {
+    height: 400px;
+    width: 1060px;
+    background-image: url("../images/foreflower.png");
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -300px;
+    margin-left: -530px; }
+  main .back-flower {
+    height: 300px;
+    width: 1060px;
+    background-image: url("../images/backflower2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    top: -30px;
+    margin-left: -530px; }
+  main .clothes-more {
+    padding: 5px 10px;
+    color: white !important;
+    background-color: lightcoral;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block; }
+    main .clothes-more:hover {
+      transform: scale(1.1); }
+  main .clothes-container {
+    position: relative;
+    margin-bottom: 10px; }
+    main .clothes-container div {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      object-fit: cover;
+      display: inline-block;
+      opacity: 0;
+      transform: translate(30%, 0);
+      transition: all 0.65s; }
+      main .clothes-container div img {
+        position: absolute;
+        display: block;
+        width: 180%;
+        top: 0;
+        left: -50%;
+        transition: all 0.32s ease; }
+      main .clothes-container div::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.22);
+        opacity: 0;
+        transition: all 0.32s ease; }
+      main .clothes-container div .clothes-caption {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: 10%;
+        left: 0;
+        right: 0;
+        background-color: lightcoral;
+        padding: 10px;
+        color: white;
+        transition: all 0.32s ease; }
+      main .clothes-container div.is-showing {
+        opacity: 1;
+        transform: translate(0, 0); }
+      main .clothes-container div:hover > .clothes-caption {
+        transform: translate(0, 0); }
+      main .clothes-container div:hover > img {
+        transform: scale(1.2); }
+      main .clothes-container div:hover::after {
+        opacity: 1; }
+  main .large-window {
+    position: relative;
+    border-radius: 69%;
+    overflow: hidden;
+    background-image: url("../images/window2.jpg");
+    background-size: contain;
+    background-position: center 0px;
+    background-attachment: fixed; }
+    main .large-window .window-tint {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.225);
+      opacity: 0; }
+      main .large-window .window-tint .window-caption {
+        color: white;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 45%;
+        transform: translate(-50%, -50%); }
+        main .large-window .window-tint .window-caption a {
+          display: block;
+          border: 2px solid white;
+          padding: 5px 5px;
+          margin-top: 20px;
+          color: white;
+          transition: all 0.3s;
+          cursor: pointer; }
+          main .large-window .window-tint .window-caption a:hover {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            transform: scale(1.08); }
+  main .post-container {
+    margin-bottom: 50px; }
+    main .post-container div:not(.post) {
+      padding: 10px; }
+    main .post-container .post {
+      border: 1px solid grey;
+      border-radius: 5px;
+      padding: 15px 10px 20px 10px;
+      position: relative;
+      background-color: white;
+      opacity: 0;
+      transition: opacity 1s ease; }
+      main .post-container .post img {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 110px;
+        object-fit: cover; }
+      main .post-container .post a {
+        padding: 8px 12px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #2d2d2d;
+        background-color: white;
+        transition: all 0.5s ease; }
+        main .post-container .post a:hover {
+          border: 1px solid white;
+          background-color: lightcoral;
+          color: white; }
+  main footer {
+    background-color: #ffafaf;
+    background-image: url("../images/h4.jpg");
+    background-size: cover;
+    background-position: center -20%;
+    background-attachment: fixed;
+    height: auto;
+    color: white; }
+    main footer .col-lg-3 {
+      padding: 0; }
+    main footer li {
+      position: relative;
+      display: block;
+      list-style-type: none;
+      margin-bottom: 5px; }
+      main footer li span, main footer li i {
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: middle; }
+      main footer li i {
+        width: 30px; }
+      main footer li span {
+        max-width: 80%; }
+
+@media only screen and (min-width: 0) {
+  .fore-flower {
+    left: 0%; }
+
+  .back-flower {
+    left: 100%; }
+
+  .large-window {
+    height: 280px;
+    width: 280px; } }
+@media only screen and (min-width: 992px) {
+  .fore-flower {
+    left: 50%; }
+
+  .back-flower {
+    left: 50%; }
+
+  .large-window {
+    height: 380px;
+    width: 380px; }
+
+  .clothes-caption {
+    transform: translate(-100%, 0); }
+
+  .post-1 {
+    transform: translate(80px, 30px); }
+
+  .post-2 {
+    transform: translate(0, 0);
+    z-index: 2; }
+
+  .post-3 {
+    transform: translate(-80px, 30px); } }
+
+/*# sourceMappingURL=main.css.map */

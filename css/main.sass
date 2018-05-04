@@ -1,0 +1,242 @@
+*
+    font-family: 'Open Sans', sans-serif
+main
+    overflow: hidden
+
+    .flower-box
+        position: relative
+        height: 600px
+        overflow: hidden
+        background:
+            image: url('../images/h4.jpg')
+            size: cover
+            position: center
+            attachment: fixed        
+    .logo
+        height: 300px
+        width: 100%
+        position: absolute
+        background:
+            image: url('../images/logow.png')
+            size: contain
+            position: center
+            repeat: no-repeat
+        top: 30%
+        left: 50%
+        margin-left: -50%
+    .fore-flower
+        height: 400px
+        width: 1060px
+        background:
+            image: url('../images/foreflower.png')
+            position: bottom right
+            size: contain
+            repeat: no-repeat
+        position: absolute
+        bottom: -300px
+        margin-left: -530px
+    .back-flower
+        height: 300px
+        width: 1060px
+        background:
+            image: url('../images/backflower2.png')
+            size: contain
+            repeat: no-repeat
+            position: top left
+        position: absolute
+        top: -30px
+        margin-left: -530px
+
+    .clothes-more
+        padding: 5px 10px
+        color: white !important
+        background-color: lightcoral
+        border: 1px solid white
+        border-radius: 5px
+        cursor: pointer
+        transition: all .2s ease
+        display: inline-block
+        &:hover
+            transform: scale(1.1)
+        
+    .clothes-container
+        position: relative
+        margin-bottom: 10px
+        div 
+            position: relative
+            height: 220px
+            overflow: hidden
+            object-fit: cover
+            display: inline-block
+            opacity: 0
+            transform: translate(30%, 0)
+            transition: all 0.65s
+            img
+                position: absolute
+                display: block
+                width: 180%
+                top: 0
+                left: -50%
+                // transform: translateX(-50%)
+                transition: all 0.32s ease
+            &::after
+                content: ''
+                position: absolute
+                display: block
+                top: 0
+                right: 0
+                left: 0
+                bottom: 0
+                background-color: rgba(0,0,0, 0.22)
+                opacity: 0
+                transition: all 0.32s ease
+            .clothes-caption
+                display: block
+                position: absolute
+                z-index: 2
+                bottom: 10%
+                left: 0
+                right: 0
+                background-color: lightcoral
+                padding: 10px 
+                color: white
+                transition: all 0.32s ease
+            &.is-showing
+                opacity: 1
+                transform: translate(0,0)
+            &:hover > .clothes-caption
+                transform: translate(0,0)
+            &:hover > img 
+                transform: scale(1.2)
+            &:hover::after
+                opacity: 1
+
+    .large-window
+        position: relative
+        border-radius: 69%
+        overflow: hidden
+        background:
+            image: url('../images/window2.jpg')
+            size: contain
+            position: center 0px
+            attachment: fixed
+        .window-tint
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: rgba(0,0,0,0.225)
+            opacity: 0
+            .window-caption
+                color: white
+                position: absolute
+                z-index: 2
+                top: 50%
+                left: 50%
+                width: 45%
+                transform: translate(-50%, -50%)
+                a
+                    display: block
+                    border: 2px solid white
+                    padding: 5px 5px
+                    margin-top: 20px
+                    color: white
+                    transition: all 0.3s
+                    cursor: pointer
+                    &:hover
+                        text-decoration: none
+                        color: black
+                        background-color: white
+                        transform: scale(1.08)
+    .post-container
+        margin-bottom: 50px
+        div:not(.post)
+            padding: 10px                        
+        .post
+            border: 1px solid grey
+            border-radius: 5px
+            padding: 15px 10px 20px 10px
+            position: relative
+            background-color: white
+            opacity: 0
+            transition: opacity 1s ease
+            img
+                display: block
+                width: 100%
+                margin-bottom: 10px
+                height: 110px
+                object-fit: cover
+            a
+                padding: 8px 12px
+                border: 1px solid grey       
+                border-radius: 5px
+                cursor: pointer
+                color: #2d2d2d
+                background-color: white    
+                transition: all 0.5s ease
+                &:hover
+                    border: 1px solid white
+                    background-color: lightcoral
+                    color: white      
+    footer
+        background:
+            color: #ffafaf
+            image: url('../images/h4.jpg')
+            size: cover
+            position: center -20%
+            attachment: fixed
+        height: auto
+        color: white
+        .col-lg-3
+            padding: 0
+        li
+            position: relative
+            display: block
+            list-style-type: none
+            margin-bottom: 5px
+            span, i 
+                display: inline-block
+                cursor: pointer
+                vertical-align: middle
+            i
+                width: 30px
+            span
+                max-width: 80%
+
+
+
+@media only screen and (min-width: 0)
+    .fore-flower
+        left: 0%
+
+    .back-flower
+        left: 100%
+
+    .large-window
+        height: 280px
+        width: 280px
+
+@media only screen and (min-width: 992px)
+    .fore-flower
+        left: 50%
+
+    .back-flower
+        left: 50%    
+
+    .large-window
+        height: 380px
+        width: 380px
+
+    .clothes-caption
+        transform: translate(-100%, 0)
+
+    .post-1
+        transform: translate(80px, 30px)
+    .post-2
+        transform: translate(0, 0)
+        z-index: 2
+    .post-3
+        transform: translate(-80px, 30px)
+        
