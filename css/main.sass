@@ -1,5 +1,9 @@
 *
     font-family: 'Open Sans', sans-serif
+
+body
+    background-color: white
+    z-index: 0
 main
     overflow: hidden
 
@@ -181,13 +185,17 @@ main
                     background-color: lightcoral
                     color: white      
     footer
+        position: fixed
+        z-index: -1
+        bottom: 0
         background:
             color: #ffafaf
             image: url('../images/h4.jpg')
             size: cover
-            position: center -20%
-            attachment: fixed
-        height: auto
+            position: center 65%
+        left: 0
+        right: 0
+        height: 300px
         color: white
         .col-lg-3
             padding: 0
@@ -205,7 +213,12 @@ main
             span
                 max-width: 80%
 
-
+section:last-of-type
+    margin-bottom: 300px    
+section
+    z-index: 1
+    position: relative
+    background-color: white
 
 @media only screen and (min-width: 0)
     .fore-flower

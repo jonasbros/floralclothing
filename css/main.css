@@ -1,6 +1,10 @@
 * {
   font-family: "Open Sans", sans-serif; }
 
+body {
+  background-color: white;
+  z-index: 0; }
+
 main {
   overflow: hidden; }
   main .flower-box {
@@ -172,12 +176,16 @@ main {
           background-color: lightcoral;
           color: white; }
   main footer {
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
     background-color: #ffafaf;
     background-image: url("../images/h4.jpg");
     background-size: cover;
-    background-position: center -20%;
-    background-attachment: fixed;
-    height: auto;
+    background-position: center 65%;
+    left: 0;
+    right: 0;
+    height: 300px;
     color: white; }
     main footer .col-lg-3 {
       padding: 0; }
@@ -194,6 +202,14 @@ main {
         width: 30px; }
       main footer li span {
         max-width: 80%; }
+
+section:last-of-type {
+  margin-bottom: 300px; }
+
+section {
+  z-index: 1;
+  position: relative;
+  background-color: white; }
 
 @media only screen and (min-width: 0) {
   .fore-flower {
